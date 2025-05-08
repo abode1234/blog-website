@@ -32,7 +32,7 @@
       <!-- Mobile menu button -->
       <button 
         type="button" 
-        class="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+        class="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-400 "
         aria-label="Toggle menu"
         onclick={toggleMobileMenu}
       >
@@ -50,7 +50,7 @@
         {#each navLinks as link}
           <a 
             href={link.path} 
-            class="block py-2 px-3 rounded-md nav-link {path === link.path ? 'bg-gray-100 dark:bg-gray-800 text-primary' : ''}"
+            class="block py-2 px-3 rounded-md nav-link {path === link.path ? 'bg-gray-400 dark:bg-gray-800 text-white text-primary' : ''}"
             onclick={() => mobileMenuOpen = false}
           >
             {link.name}
