@@ -1,9 +1,9 @@
 import { mdsvex } from 'mdsvex';
-import netlify from '@sveltejs/adapter-netlify';
+import adapter from '@sveltejs/adapter-auto';
 
 const config = {
 	kit: { 
-		adapter: netlify(),
+		adapter: adapter(),
 		alias: {
 			'$content': 'src/content'
 		}
