@@ -32,7 +32,7 @@
       <!-- Mobile menu button -->
       <button 
         type="button" 
-        class="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-400 "
+        class="md:hidden p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-400 "
         aria-label="Toggle menu"
         onclick={toggleMobileMenu}
       >
