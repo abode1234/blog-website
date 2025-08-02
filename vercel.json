@@ -1,19 +1,5 @@
 {
   "github": {
     "silent": true
-  },
-  "functions": {
-    "src/routes/**/*.js": {
-      "maxDuration": 30
-    },
-    "src/routes/**/*.ts": {
-      "maxDuration": 30
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ]
+  }
 } 

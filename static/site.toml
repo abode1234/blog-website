@@ -19,8 +19,8 @@ I'm Abdul-Almotaleb, an AI engineer and backend developer with deep expertise in
 bug bounty hunting, and building specialized security tools. I combine my knowledge of AI/ML algorithms 
 with strong backend development skills to create intelligent security solutions and automation tools.
 """
-location = "Saudi Arabia"
-email = "contact@example.com"
+location = "Iraq"
+email = "bmk72ihvmu@gmail.com"
 
 [social]
 github = "https://github.com/abode1234"
@@ -95,6 +95,6 @@ robots = "index, follow"
 # Contact Information
 [contact]
 show_contact_form = false
-email = "contact@example.com"
+email = "bmk72ihvmu@gmail.com"
 phone = ""
 address = "" 
