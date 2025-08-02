@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, customizable portfolio website built with SvelteKit, designed specifically for network engineers and cybersecurity professionals.
+A modern, customizable portfolio website built with SvelteKit, designed specifically for AI engineers, backend developers, and cybersecurity professionals.
 
 ## 🚀 Features
 

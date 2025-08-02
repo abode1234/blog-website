@@ -1,19 +1,14 @@
 <script>
-  import { getNavigationConfig } from '$lib/config.js';
-  
-  // Active route tracking
-  let { path } = $props();
-  
-  // Load navigation configuration
-  const navConfig = getNavigationConfig();
+  // Active route tracking and navigation config
+  let { path, navigationConfig } = $props();
   
   // Build navigation links based on configuration
   /** @type {Array<{name: string, path: string}>} */
   const navLinks = [];
-  if (navConfig.show_home) navLinks.push({ name: 'Home', path: '/' });
-  if (navConfig.show_projects) navLinks.push({ name: 'Projects', path: '/projects' });
-  if (navConfig.show_blog) navLinks.push({ name: 'Blog', path: '/blog' });
-  if (navConfig.show_contact) navLinks.push({ name: 'Contact', path: '/contact' });
+  if (navigationConfig?.show_home) navLinks.push({ name: 'Home', path: '/' });
+  if (navigationConfig?.show_projects) navLinks.push({ name: 'Projects', path: '/projects' });
+  if (navigationConfig?.show_blog) navLinks.push({ name: 'Blog', path: '/blog' });
+  if (navigationConfig?.show_contact) navLinks.push({ name: 'Contact', path: '/contact' });
 
   let mobileMenuOpen = $state(false);
 

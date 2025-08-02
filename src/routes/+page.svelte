@@ -1,13 +1,16 @@
 <script>
-    import { getSiteConfig, getOwnerConfig, getSkillsConfig } from '$lib/config.js';
+    import { page } from '$app/stores';
     
-    // Load configuration from TOML file
-    const siteConfig = getSiteConfig();
-    const ownerConfig = getOwnerConfig();
-    const skillsConfig = getSkillsConfig();
+    /** @type {import('./$types').PageData} */
+    export let data;
+    
+    // Get data from the load function
+    const siteConfig = data.siteConfig;
+    const ownerConfig = data.ownerConfig;
+    const skillsConfig = data.skillsConfig;
     
     // Extract skills from configuration
-    const networkingSkills = skillsConfig.networking || [];
+    const programmingSkills = skillsConfig.programming || [];
     const technicalSkills = skillsConfig.technical || [];
     const certifications = skillsConfig.certifications || [];
 </script>
@@ -32,8 +35,8 @@
             {@html ownerConfig.bio.replace(/\n/g, '</p><p class="text-gray-300 mb-4">')}
         </div>
         <p class="text-gray-300">
-            On this portfolio, I showcase my projects, share insights about network security, and demonstrate my expertise 
-            in cybersecurity. Explore my work and join me in securing the digital world!
+            On this portfolio, I showcase my AI/ML projects, backend architectures, and security tools. 
+            Explore my work in artificial intelligence, microservices, and cybersecurity innovations!
         </p>
     </div>
 </section>
@@ -41,15 +44,15 @@
 <section>
     <h2 class="text-2xl font-semibold mb-8 text-white">My Expertise</h2>
 
-    <!-- Network Engineering & Security Skills -->
+    <!-- Programming Languages & Technologies -->
     <div class="mb-10">
         <h3 class="text-xl font-semibold mb-5 text-white">
-            Network Engineering & Security
+            Programming Languages & Technologies
         </h3>
         <br />
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {#each networkingSkills as skill}
+            {#each programmingSkills as skill}
                 <div
                     class="rounded-lg shadow-md p-4 flex items-center min-h-[80px] transition-shadow hover:shadow-lg"
                     style="background: linear-gradient(145deg, #1C2128 0%, #22272E 100%); border: 1px solid #30363D;"
@@ -73,10 +76,10 @@
     </div>
     <br />
 
-    <!-- Technical Skills -->
+    <!-- Technical Skills & Frameworks -->
     <div class="mb-10">
         <h3 class="text-xl font-semibold mb-5 text-white">
-            Technical Skills & Tools
+            Frameworks & Technical Skills
         </h3>
         <br />
 

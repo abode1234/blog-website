@@ -1,13 +1,13 @@
 <script>
   /** @type {import('./$types').PageData} */
-  let { data } = $props();
+  export let data;
   
   const posts = data.posts;
 </script>
 
 <svelte:head>
   <title>Blog | Abdul-Almotaleb</title>
-  <meta name="description" content="Blog posts about network security, penetration testing, and web security." />
+  <meta name="description" content="Blog posts about AI, machine learning, backend development, cybersecurity, and innovative tech solutions." />
 </svelte:head>
 
 <h1 class="text-3xl md:text-4xl font-bold mb-8 text-white">Blog</h1>

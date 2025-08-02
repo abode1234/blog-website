@@ -1,13 +1,8 @@
 <script>
-  import { getSiteConfig, getOwnerConfig, getSocialConfig, getFeaturesConfig } from '$lib/config.js';
+  // Receive configuration as props
+  let { siteConfig, ownerConfig, socialConfig, featuresConfig } = $props();
   
-  // Load configuration
-  const siteConfig = getSiteConfig();
-  const ownerConfig = getOwnerConfig();
-  const socialConfig = getSocialConfig();
-  const featuresConfig = getFeaturesConfig();
-  
-  const currentYear = siteConfig.copyright_year || new Date().getFullYear();
+  const currentYear = siteConfig?.copyright_year || new Date().getFullYear();
 </script>
 
 <footer class="py-8 border-t mt-auto" style="border-color: #30363D; background: rgba(13, 17, 23, 0.8); backdrop-filter: blur(10px);">
@@ -15,14 +10,14 @@
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="mb-4 md:mb-0">
         <p class="text-gray-300">
-          &copy; {currentYear} {ownerConfig.name}. All rights reserved.
+          &copy; {currentYear} {ownerConfig?.name}. All rights reserved.
         </p>
       </div>
       
-      {#if featuresConfig.show_social_links}
+      {#if featuresConfig?.show_social_links}
         <div class="flex space-x-6">
           <!-- GitHub -->
-          {#if socialConfig.github}
+          {#if socialConfig?.github}
             <a href={socialConfig.github} target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-primary transition-colors">
               <span class="sr-only">GitHub</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -32,7 +27,7 @@
           {/if}
           
           <!-- LinkedIn -->
-          {#if socialConfig.linkedin}
+          {#if socialConfig?.linkedin}
             <a href={socialConfig.linkedin} target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-primary transition-colors">
               <span class="sr-only">LinkedIn</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -41,8 +36,18 @@
             </a>
           {/if}
           
+          <!-- X (Twitter) -->
+          {#if socialConfig?.x}
+            <a href={socialConfig.x} target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-primary transition-colors">
+              <span class="sr-only">X (Twitter)</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          {/if}
+          
           <!-- YouTube -->
-          {#if socialConfig.youtube}
+          {#if socialConfig?.youtube}
             <a href={socialConfig.youtube} target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-primary transition-colors">
               <span class="sr-only">YouTube</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -52,7 +57,7 @@
           {/if}
           
           <!-- Website -->
-          {#if socialConfig.website}
+          {#if socialConfig?.website}
             <a href={socialConfig.website} target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-primary transition-colors">
               <span class="sr-only">Website</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

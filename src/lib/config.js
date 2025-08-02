@@ -173,4 +173,9 @@ export const getContactConfig = () => /** @type {any} */ (loadConfig()).contact;
 /**
  * Get projects configuration
  */
-export const getProjectsConfig = () => /** @type {any} */ (loadProjectsConfig()).projects || []; 
+export const getProjectsConfig = () => {
+  /** @type {any} */
+  const projectsData = loadProjectsConfig();
+  // In TOML, [[projects]] creates an array called 'projects' at the root level
+  return projectsData.projects || [];
+}; 

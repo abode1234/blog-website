@@ -5,9 +5,9 @@
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	
-	let { children } = $props();
+	/** @type {import('./$types').LayoutData} */
+	let { data, children } = $props();
 	
-
 	// Current path for active link highlighting
 	let path = $derived($page.url.pathname);
 	
@@ -18,11 +18,16 @@
 </script>
 
 <div class="flex flex-col min-h-screen dark">
-	<Header path={path} />
+	<Header path={path} navigationConfig={data.navigationConfig} />
 	
 	<main class="container-custom py-8 flex-grow">
 		{@render children()}
 	</main>
 	
-	<Footer />
+	<Footer 
+		siteConfig={data.siteConfig} 
+		ownerConfig={data.ownerConfig} 
+		socialConfig={data.socialConfig} 
+		featuresConfig={data.featuresConfig} 
+	/>
 </div>

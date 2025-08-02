@@ -1,26 +1,31 @@
 <script>
-    import { getSiteConfig, getOwnerConfig, getProjectsConfig } from '$lib/config.js';
+    // @ts-ignore
+    let { data } = $props();
     
-    // Load configuration from TOML files
-    const siteConfig = getSiteConfig();
-    const ownerConfig = getOwnerConfig();
-    const projects = getProjectsConfig();
+    // Get data from the load function
+    const siteConfig = data.siteConfig;
+    const ownerConfig = data.ownerConfig;
+    const projects = data.projects;
 
-    const categories = [...new Set(projects.map(p => p.category))];
+    const categories = [...new Set(projects.map((/** @type {any} */ p) => p.category))];
     let selectedCategory = $state('All');
 
     const filteredProjects = $derived(
         selectedCategory === 'All' 
             ? projects 
-            : projects.filter(p => p.category === selectedCategory)
+            : projects.filter((/** @type {any} */ p) => p.category === selectedCategory)
     );
+    
+    function selectCategory(/** @type {string} */ category) {
+        selectedCategory = category;
+    }
 </script>
 
 <svelte:head>
     <title>Projects | {ownerConfig.name} - {ownerConfig.profession}</title>
     <meta
         name="description"
-        content="Portfolio of {ownerConfig.profession} projects showcasing expertise in network engineering and cybersecurity."
+        content="Portfolio of {ownerConfig.profession} projects showcasing expertise in AI/ML, backend development, and cybersecurity innovations."
     />
 </svelte:head>
 
@@ -29,9 +34,8 @@
     
     <div class="rounded-lg shadow-md p-6 mb-8" style="background: linear-gradient(145deg, #1C2128 0%, #22272E 100%); border: 1px solid #30363D;">
         <p class="text-gray-300 text-lg">
-            Here are some of the key projects I've worked on in network engineering, cybersecurity, 
-            and penetration testing. Each project demonstrates my practical application of technical skills 
-            and professional expertise.
+            Here are some of the key projects I've worked on in AI/ML, backend development, and cybersecurity. 
+            Each project demonstrates my practical application of cutting-edge technologies and innovative solutions.
         </p>
     </div>
 </section>
@@ -41,17 +45,17 @@
     
     <div class="flex flex-wrap gap-3 mb-8">
         <button
-            class="px-4 py-2 rounded-lg font-medium transition-colors {selectedCategory === 'All' ? 'bg-blue-600 text-white' : 'text-gray-300 hover:bg-gray-600'}"
-            style="{selectedCategory === 'All' ? 'background: linear-gradient(135deg, #0175C2 0%, #13B9FD 100%); box-shadow: 0 4px 15px rgba(19, 185, 253, 0.3);' : 'background: linear-gradient(145deg, #1C2128 0%, #22272E 100%); border: 1px solid #30363D;'}"
-            onclick={() => selectedCategory = 'All'}
+            class="px-4 py-2 rounded-lg font-medium transition-colors {selectedCategory === 'All' ? 'btn-active' : 'btn-inactive'}"
+            onclick={() => selectCategory('All')}
+            type="button"
         >
             All Projects
         </button>
         {#each categories as category}
             <button
-                class="px-4 py-2 rounded-lg font-medium transition-colors {selectedCategory === category ? 'bg-blue-600 text-white' : 'text-gray-300 hover:bg-gray-600'}"
-                style="{selectedCategory === category ? 'background: linear-gradient(135deg, #0175C2 0%, #13B9FD 100%); box-shadow: 0 4px 15px rgba(19, 185, 253, 0.3);' : 'background: linear-gradient(145deg, #1C2128 0%, #22272E 100%); border: 1px solid #30363D;'}"
-                onclick={() => selectedCategory = category}
+                class="px-4 py-2 rounded-lg font-medium transition-colors {selectedCategory === category ? 'btn-active' : 'btn-inactive'}"
+                onclick={() => selectCategory(category)}
+                type="button"
             >
                 {category}
             </button>
@@ -123,8 +127,8 @@
     <div class="rounded-lg shadow-md p-6" style="background: linear-gradient(145deg, #1C2128 0%, #22272E 100%); border: 1px solid #30363D;">
         <h2 class="text-2xl font-semibold mb-4 text-white">Get In Touch</h2>
         <p class="text-gray-300 mb-4">
-            Interested in collaborating on network security projects or discussing cybersecurity challenges? 
-            I'm always open to new opportunities and conversations.
+            Interested in collaborating on AI projects, backend architectures, or discussing innovative security solutions? 
+            I'm always open to new opportunities and technical challenges.
         </p>
         <div class="flex flex-col md:flex-row gap-4">
             <a
@@ -151,3 +155,22 @@
         </div>
     </div>
 </section> 
+
+<style>
+    .btn-active {
+        background: linear-gradient(135deg, #0175C2 0%, #13B9FD 100%);
+        box-shadow: 0 4px 15px rgba(19, 185, 253, 0.3);
+        color: white;
+    }
+    
+    .btn-inactive {
+        background: linear-gradient(145deg, #1C2128 0%, #22272E 100%);
+        border: 1px solid #30363D;
+        color: #d1d5db;
+    }
+    
+    .btn-inactive:hover {
+        background: linear-gradient(145deg, #374151 0%, #4B5563 100%);
+        color: white;
+    }
+</style> 

@@ -3,20 +3,21 @@
 
 [site]
 title = "Abdul-Almotaleb"
-tagline = "Network Engineer & Cybersecurity Expert"
-description = "Portfolio of Abdul-Almotaleb, a certified network engineer specializing in CCNA, CyberOps, and Bug Bounty hunting."
+tagline = "AI Engineer & Backend Developer"
+description = "Portfolio of Abdul-Almotaleb, an AI engineer and backend developer specializing in cybersecurity, bug bounty hunting, and tool development."
 domain = "your-domain.com"
 language = "en"
 copyright_year = 2024
 
+
 [owner]
 name = "Abdul-Almotaleb"
 full_name = "Abdul-Almotaleb Al-Fasial"
-profession = "Network Engineer & Cybersecurity Expert"
+profession = "AI Engineer & Backend Developer"
 bio = """
-I'm Abdul-Almotaleb, a certified network engineer and cybersecurity expert with specialized expertise in 
-CCNA, CyberOps, and Bug Bounty hunting. I have extensive experience in designing, implementing, and securing 
-network infrastructures while identifying and mitigating security vulnerabilities.
+I'm Abdul-Almotaleb, an AI engineer and backend developer with deep expertise in cybersecurity, 
+bug bounty hunting, and building specialized security tools. I combine my knowledge of AI/ML algorithms 
+with strong backend development skills to create intelligent security solutions and automation tools.
 """
 location = "Saudi Arabia"
 email = "contact@example.com"
@@ -24,40 +25,41 @@ email = "contact@example.com"
 [social]
 github = "https://github.com/abode1234"
 linkedin = "https://www.linkedin.com/in/abdulalmotaleb-alfasial-48392723a"
+x = "https://x.com/yourusername"
 youtube = "https://www.youtube.com/channel/UC7dUj3I4e4Q6bEaJH2r8Oqg"
 website = ""
 blog = ""
 
 # Professional Skills and Certifications
 [skills]
-networking = [
-    { name = "CCNA (Cisco Certified Network Associate)", level = "Certified", icon = "🌐" },
-    { name = "CyberOps (Cisco CyberOps Associate)", level = "Certified", icon = "🛡️" },
-    { name = "Bug Bounty Hunting", level = "Expert", icon = "🐛" },
-    { name = "Network Security", level = "Advanced", icon = "🔒" },
-    { name = "Penetration Testing", level = "Advanced", icon = "🔍" },
-    { name = "Firewall Configuration", level = "Advanced", icon = "🔥" },
-    { name = "Network Monitoring", level = "Advanced", icon = "📊" },
-    { name = "Vulnerability Assessment", level = "Expert", icon = "⚠️" }
+programming = [
+    { name = "Python (AI/ML & Security Tools)", level = "Expert", icon = "🐍" },
+    { name = "Go (Backend & High-Performance Tools)", level = "Advanced", icon = "🐹" },
+    { name = "JavaScript/TypeScript", level = "Expert", icon = "📜" },
+    { name = "C/C++ (System Programming)", level = "Advanced", icon = "⚙️" },
+    { name = "SQL & NoSQL Databases", level = "Advanced", icon = "🗃️" },
+    { name = "Shell Scripting (Bash/Zsh)", level = "Expert", icon = "🖥️" },
+    { name = "Docker & Kubernetes", level = "Advanced", icon = "🐳" },
+    { name = "Git & CI/CD", level = "Expert", icon = "🔧" }
 ]
 
 technical = [
-    { name = "Cisco IOS & Configuration", level = "Advanced", icon = "⚙️" },
-    { name = "pfSense Firewall", level = "Advanced", icon = "🔥" },
-    { name = "Network Protocols (TCP/IP, DNS, DHCP)", level = "Expert", icon = "📡" },
-    { name = "Wireshark (Network Analysis)", level = "Advanced", icon = "🦈" },
-    { name = "Nmap (Network Scanning)", level = "Advanced", icon = "🗺️" },
-    { name = "Burp Suite (Web Security)", level = "Advanced", icon = "🔧" },
-    { name = "Metasploit Framework", level = "Intermediate", icon = "⚡" },
-    { name = "Network Monitoring & SNMP", level = "Advanced", icon = "📊" },
-    { name = "VPN Configuration", level = "Advanced", icon = "🔐" },
-    { name = "IDS/IPS Systems", level = "Intermediate", icon = "🛡️" }
+    { name = "NestJS (Backend Framework)", level = "Expert", icon = "🚀" },
+    { name = "Svelte/SvelteKit (Frontend)", level = "Expert", icon = "🎨" },
+    { name = "Machine Learning (TensorFlow/PyTorch)", level = "Advanced", icon = "🤖" },
+    { name = "RESTful APIs & GraphQL", level = "Expert", icon = "🔌" },
+    { name = "Microservices Architecture", level = "Advanced", icon = "🏗️" },
+    { name = "Network Protocols (TCP/IP, HTTP/S)", level = "Expert", icon = "🌐" },
+    { name = "Bug Bounty Hunting", level = "Expert", icon = "🐛" },
+    { name = "Security Tool Development", level = "Expert", icon = "🛠️" },
+    { name = "OWASP Top 10", level = "Expert", icon = "🔒" },
+    { name = "Penetration Testing", level = "Advanced", icon = "🔍" }
 ]
 
 certifications = [
-    { name = "CCNA", description = "Cisco Certified Network Associate", icon = "🏆" },
-    { name = "CyberOps Associate", description = "Cisco CyberOps Associate", icon = "🥇" },
-    { name = "Bug Bounty Hunter", description = "Active on various platforms", icon = "🎯" }
+    { name = "Bug Bounty Hunter", description = "Active on HackerOne, Bugcrowd", icon = "🎯" },
+    { name = "AI/ML Specialist", description = "Deep Learning & Neural Networks", icon = "🤖" },
+    { name = "Backend Architecture", description = "Microservices & Cloud Native", icon = "☁️" }
 ]
 
 # Theme Configuration
@@ -87,7 +89,7 @@ enable_animations = true
 
 # SEO Configuration
 [seo]
-keywords = "network engineer, cybersecurity, CCNA, CyberOps, bug bounty, penetration testing, network security"
+keywords = "AI engineer, backend developer, cybersecurity, bug bounty, penetration testing, machine learning, NestJS, Python, Go, security tools"
 author = "Abdul-Almotaleb Al-Fasial"
 robots = "index, follow"
 

@@ -2,79 +2,105 @@
 # Add your projects here with just the essential information
 
 [[projects]]
-name = "Network Security Monitoring System"
-description = "Implemented a comprehensive network monitoring solution using Python and Wireshark to detect and analyze network anomalies and potential security threats."
-category = "Network Security"
-icon = "🔍"
-link = "https://github.com/yourusername/network-monitoring"
-technologies = ["Python", "Wireshark", "Network Analysis", "SNMP"]
+name = "AI-Powered Vulnerability Scanner"
+description = "Developed an intelligent vulnerability scanner using machine learning algorithms to predict and identify potential security weaknesses in web applications and networks."
+category = "AI & Security"
+icon = "🤖"
+link = "https://github.com/yourusername/ai-vuln-scanner"
+technologies = ["Python", "TensorFlow", "PyTorch", "NestJS", "GraphQL", "Docker"]
 highlights = [
-    "Real-time network traffic analysis",
-    "Automated threat detection alerts",
-    "Custom Python scripts for log analysis"
+    "ML model with 95% accuracy in vulnerability prediction",
+    "Automated scanning with intelligent prioritization",
+    "Real-time threat intelligence integration"
 ]
 
 [[projects]]
-name = "Enterprise Network Infrastructure Design"
-description = "Designed and implemented a scalable network infrastructure for a medium-sized enterprise using Cisco equipment, including VLANs, routing protocols, and security policies."
-category = "Network Engineering"
-icon = "🌐"
-link = "https://github.com/yourusername/network-design"
-technologies = ["Cisco IOS", "VLAN", "OSPF", "Network Design"]
+name = "Microservices Backend Architecture"
+description = "Built a scalable microservices architecture using NestJS for a high-traffic e-commerce platform with real-time inventory management and payment processing."
+category = "Backend Development"
+icon = "🚀"
+link = "https://github.com/yourusername/microservices-backend"
+technologies = ["NestJS", "TypeScript", "GraphQL", "Redis", "PostgreSQL", "Kubernetes"]
 highlights = [
-    "Implemented VLAN segmentation for security",
-    "Configured OSPF routing protocol",
-    "Established network redundancy and failover"
+    "Handled 1M+ daily transactions",
+    "Implemented event-driven architecture",
+    "99.9% uptime with auto-scaling"
 ]
 
 [[projects]]
-name = "Web Application Penetration Testing"
-description = "Conducted comprehensive penetration testing on web applications using various tools and techniques to identify and report security vulnerabilities."
-category = "Penetration Testing"
-icon = "🔒"
-link = "https://github.com/yourusername/pentest-webapp"
-technologies = ["Burp Suite", "Python", "Web Security", "OWASP"]
-highlights = [
-    "Identified critical SQL injection vulnerabilities",
-    "Performed comprehensive OWASP Top 10 testing",
-    "Developed custom Python scripts for automation"
-]
-
-[[projects]]
-name = "Firewall Configuration and Management"
-description = "Configured and managed enterprise firewalls using pfSense, implementing advanced security rules and monitoring capabilities."
-category = "Network Security"
-icon = "🔥"
-link = "https://github.com/yourusername/pfsense-config"
-technologies = ["pfSense", "Network Security", "VPN", "IDS/IPS"]
-highlights = [
-    "Implemented VPN solutions for remote access",
-    "Configured intrusion detection systems",
-    "Established comprehensive logging and monitoring"
-]
-
-[[projects]]
-name = "Network Vulnerability Assessment Tool"
-description = "Developed a Python-based network vulnerability scanner that automates the process of identifying security weaknesses in network infrastructures."
+name = "Automated Bug Bounty Hunter Tool"
+description = "Created an automated bug bounty hunting tool that combines AI/ML for intelligent target selection with custom Go modules for high-performance scanning."
 category = "Security Tools"
-icon = "⚠️"
-link = "https://github.com/yourusername/vuln-scanner"
-technologies = ["Python", "Nmap", "Vulnerability Assessment", "Automation"]
+icon = "🐛"
+link = "https://github.com/yourusername/auto-bounty"
+technologies = ["Go", "Python", "Machine Learning", "REST APIs", "Docker"]
 highlights = [
-    "Automated vulnerability scanning workflows",
-    "Integration with Nmap for port scanning",
-    "Comprehensive reporting functionality"
+    "Discovered 50+ critical vulnerabilities",
+    "Automated reconnaissance and reporting",
+    "Integration with HackerOne & Bugcrowd APIs"
 ]
 
 [[projects]]
-name = "Bug Bounty Discoveries"
-description = "Active participation in bug bounty programs with successful identification and reporting of critical security vulnerabilities across various platforms."
-category = "Bug Bounty"
-icon = "🐛"
-link = "https://hackerone.com/yourusername"
-technologies = ["Web Security", "Bug Bounty", "Research", "Reporting"]
+name = "Network Protocol Analyzer"
+description = "Built a high-performance network protocol analyzer in C++ with Go backend for real-time packet analysis and anomaly detection using deep learning."
+category = "Network & AI"
+icon = "🌐"
+link = "https://github.com/yourusername/protocol-analyzer"
+technologies = ["C++", "Go", "Python", "Deep Learning", "TCP/IP", "WebSockets"]
 highlights = [
-    "Discovered critical authentication bypasses",
-    "Reported XSS and CSRF vulnerabilities",
-    "Contributed to improving web application security"
+    "Real-time packet analysis at 10Gbps",
+    "AI-powered anomaly detection",
+    "Custom protocol dissector framework"
+]
+
+[[projects]]
+name = "Secure Chat Application"
+description = "Developed an end-to-end encrypted chat application with NestJS backend and Svelte frontend, implementing advanced cryptographic protocols."
+category = "Full Stack Development"
+icon = "💬"
+link = "https://github.com/yourusername/secure-chat"
+technologies = ["NestJS", "Svelte", "WebRTC", "PostgreSQL", "Redis", "E2E Encryption"]
+highlights = [
+    "Zero-knowledge architecture",
+    "Real-time messaging with WebRTC",
+    "Quantum-resistant encryption"
+]
+
+[[projects]]
+name = "AI Security Operations Center (SOC)"
+description = "Built an AI-powered SOC platform that uses machine learning to automate threat detection, incident response, and security orchestration."
+category = "AI & Security"
+icon = "🛡️"
+link = "https://github.com/yourusername/ai-soc"
+technologies = ["Python", "TensorFlow", "NestJS", "Elasticsearch", "Kubernetes", "SIEM"]
+highlights = [
+    "Reduced incident response time by 80%",
+    "ML-based threat correlation",
+    "Automated playbook execution"
+]
+
+[[projects]]
+name = "Blockchain Security Audit Tool"
+description = "Developed a comprehensive security audit tool for smart contracts and blockchain applications using static analysis and fuzzing techniques."
+category = "Security Tools"
+icon = "⛓️"
+link = "https://github.com/yourusername/blockchain-audit"
+technologies = ["Go", "Python", "Solidity", "Static Analysis", "Fuzzing", "Web3"]
+highlights = [
+    "Detected $2M+ in potential vulnerabilities",
+    "Support for multiple blockchain platforms",
+    "Automated report generation"
+]
+
+[[projects]]
+name = "High-Performance API Gateway"
+description = "Built a custom API gateway in Go with advanced rate limiting, authentication, and traffic management capabilities for microservices."
+category = "Backend Development"
+icon = "⚡"
+link = "https://github.com/yourusername/api-gateway"
+technologies = ["Go", "gRPC", "Redis", "Prometheus", "Grafana", "Docker"]
+highlights = [
+    "Handle 100K+ requests per second",
+    "Sub-millisecond latency",
+    "Advanced traffic shaping algorithms"
 ] 
