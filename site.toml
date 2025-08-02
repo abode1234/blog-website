@@ -1,0 +1,99 @@
+# Site Configuration File
+# This file allows easy customization of site details for different users/domains
+
+[site]
+title = "Abdul-Almotaleb"
+tagline = "Network Engineer & Cybersecurity Expert"
+description = "Portfolio of Abdul-Almotaleb, a certified network engineer specializing in CCNA, CyberOps, and Bug Bounty hunting."
+domain = "your-domain.com"
+language = "en"
+copyright_year = 2024
+
+[owner]
+name = "Abdul-Almotaleb"
+full_name = "Abdul-Almotaleb Al-Fasial"
+profession = "Network Engineer & Cybersecurity Expert"
+bio = """
+I'm Abdul-Almotaleb, a certified network engineer and cybersecurity expert with specialized expertise in 
+CCNA, CyberOps, and Bug Bounty hunting. I have extensive experience in designing, implementing, and securing 
+network infrastructures while identifying and mitigating security vulnerabilities.
+"""
+location = "Saudi Arabia"
+email = "contact@example.com"
+
+[social]
+github = "https://github.com/abode1234"
+linkedin = "https://www.linkedin.com/in/abdulalmotaleb-alfasial-48392723a"
+youtube = "https://www.youtube.com/channel/UC7dUj3I4e4Q6bEaJH2r8Oqg"
+website = ""
+blog = ""
+
+# Professional Skills and Certifications
+[skills]
+networking = [
+    { name = "CCNA (Cisco Certified Network Associate)", level = "Certified", icon = "🌐" },
+    { name = "CyberOps (Cisco CyberOps Associate)", level = "Certified", icon = "🛡️" },
+    { name = "Bug Bounty Hunting", level = "Expert", icon = "🐛" },
+    { name = "Network Security", level = "Advanced", icon = "🔒" },
+    { name = "Penetration Testing", level = "Advanced", icon = "🔍" },
+    { name = "Firewall Configuration", level = "Advanced", icon = "🔥" },
+    { name = "Network Monitoring", level = "Advanced", icon = "📊" },
+    { name = "Vulnerability Assessment", level = "Expert", icon = "⚠️" }
+]
+
+technical = [
+    { name = "Cisco IOS & Configuration", level = "Advanced", icon = "⚙️" },
+    { name = "pfSense Firewall", level = "Advanced", icon = "🔥" },
+    { name = "Network Protocols (TCP/IP, DNS, DHCP)", level = "Expert", icon = "📡" },
+    { name = "Wireshark (Network Analysis)", level = "Advanced", icon = "🦈" },
+    { name = "Nmap (Network Scanning)", level = "Advanced", icon = "🗺️" },
+    { name = "Burp Suite (Web Security)", level = "Advanced", icon = "🔧" },
+    { name = "Metasploit Framework", level = "Intermediate", icon = "⚡" },
+    { name = "Network Monitoring & SNMP", level = "Advanced", icon = "📊" },
+    { name = "VPN Configuration", level = "Advanced", icon = "🔐" },
+    { name = "IDS/IPS Systems", level = "Intermediate", icon = "🛡️" }
+]
+
+certifications = [
+    { name = "CCNA", description = "Cisco Certified Network Associate", icon = "🏆" },
+    { name = "CyberOps Associate", description = "Cisco CyberOps Associate", icon = "🥇" },
+    { name = "Bug Bounty Hunter", description = "Active on various platforms", icon = "🎯" }
+]
+
+# Theme Configuration
+[theme]
+primary_color = "#13B9FD"
+secondary_color = "#0175C2"
+dark_background = "#0D1117"
+card_background = "linear-gradient(145deg, #1C2128 0%, #22272E 100%)"
+border_color = "#30363D"
+
+# Navigation Configuration
+[navigation]
+show_home = true
+show_projects = true
+show_blog = true
+show_contact = false
+
+# Features Toggle
+[features]
+show_skills = true
+show_certifications = true
+show_projects = true
+show_blog = true
+show_social_links = true
+enable_dark_mode = true
+enable_animations = true
+
+# SEO Configuration
+[seo]
+keywords = "network engineer, cybersecurity, CCNA, CyberOps, bug bounty, penetration testing, network security"
+author = "Abdul-Almotaleb Al-Fasial"
+robots = "index, follow"
+
+# Contact Information
+[contact]
+show_contact_form = false
+email = "contact@example.com"
+phone = ""
+address = "" 

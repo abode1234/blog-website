@@ -5,22 +5,39 @@
  * @returns {Promise<Array<{slug: string, title: string, date: string, description?: string, tags?: string[], content: any}>>} Array of blog posts
  */
 export async function getAllPosts() {
-  const posts = import.meta.glob('/src/content/blog/*.md', { eager: true });
-  
-  return Object.entries(posts)
-    .map(([path, post]) => {
-      const slug = path.split('/').pop()?.replace('.md', '') || '';
-      
-      return {
-        slug,
-        title: post.metadata?.title || 'Untitled Post',
-        date: post.metadata?.date || new Date().toISOString().split('T')[0],
-        description: post.metadata?.excerpt || post.metadata?.description,
-        tags: post.metadata?.tags || [],
-        content: post.default
-      };
-    })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  try {
+    // Use eager loading for server-side processing
+    const modules = import.meta.glob('/src/content/blog/*.md', { eager: true });
+    const posts = [];
+    
+    for (const [path, module] of Object.entries(modules)) {
+      try {
+        /** @type {any} */
+        const mod = module;
+        const slug = path.split('/').pop()?.replace('.md', '') || '';
+        
+        // Extract metadata from the module
+        const metadata = mod.metadata || {};
+        
+        posts.push({
+          slug,
+          title: metadata.title || 'Untitled Post',
+          date: metadata.date || new Date().toISOString().split('T')[0],
+          description: metadata.description || metadata.excerpt || '',
+          tags: metadata.tags || [],
+          content: mod.default
+        });
+      } catch (error) {
+        console.error(`Error loading post ${path}:`, error);
+      }
+    }
+    
+    // Sort posts by date (newest first)
+    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  } catch (error) {
+    console.error('Error loading blog posts:', error);
+    return [];
+  }
 }
 
 /**
@@ -29,6 +46,11 @@ export async function getAllPosts() {
  * @returns {Promise<{slug: string, title: string, date: string, description?: string, tags?: string[], content: any} | undefined>} The post object
  */
 export async function getPostBySlug(slug) {
-  const posts = await getAllPosts();
-  return posts.find(post => post.slug === slug);
+  try {
+    const posts = await getAllPosts();
+    return posts.find(post => post.slug === slug);
+  } catch (error) {
+    console.error(`Error loading post ${slug}:`, error);
+    return undefined;
+  }
 }

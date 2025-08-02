@@ -1,0 +1,80 @@
+# Projects Configuration File
+# Add your projects here with just the essential information
+
+[[projects]]
+name = "Network Security Monitoring System"
+description = "Implemented a comprehensive network monitoring solution using Python and Wireshark to detect and analyze network anomalies and potential security threats."
+category = "Network Security"
+icon = "🔍"
+link = "https://github.com/yourusername/network-monitoring"
+technologies = ["Python", "Wireshark", "Network Analysis", "SNMP"]
+highlights = [
+    "Real-time network traffic analysis",
+    "Automated threat detection alerts",
+    "Custom Python scripts for log analysis"
+]
+
+[[projects]]
+name = "Enterprise Network Infrastructure Design"
+description = "Designed and implemented a scalable network infrastructure for a medium-sized enterprise using Cisco equipment, including VLANs, routing protocols, and security policies."
+category = "Network Engineering"
+icon = "🌐"
+link = "https://github.com/yourusername/network-design"
+technologies = ["Cisco IOS", "VLAN", "OSPF", "Network Design"]
+highlights = [
+    "Implemented VLAN segmentation for security",
+    "Configured OSPF routing protocol",
+    "Established network redundancy and failover"
+]
+
+[[projects]]
+name = "Web Application Penetration Testing"
+description = "Conducted comprehensive penetration testing on web applications using various tools and techniques to identify and report security vulnerabilities."
+category = "Penetration Testing"
+icon = "🔒"
+link = "https://github.com/yourusername/pentest-webapp"
+technologies = ["Burp Suite", "Python", "Web Security", "OWASP"]
+highlights = [
+    "Identified critical SQL injection vulnerabilities",
+    "Performed comprehensive OWASP Top 10 testing",
+    "Developed custom Python scripts for automation"
+]
+
+[[projects]]
+name = "Firewall Configuration and Management"
+description = "Configured and managed enterprise firewalls using pfSense, implementing advanced security rules and monitoring capabilities."
+category = "Network Security"
+icon = "🔥"
+link = "https://github.com/yourusername/pfsense-config"
+technologies = ["pfSense", "Network Security", "VPN", "IDS/IPS"]
+highlights = [
+    "Implemented VPN solutions for remote access",
+    "Configured intrusion detection systems",
+    "Established comprehensive logging and monitoring"
+]
+
+[[projects]]
+name = "Network Vulnerability Assessment Tool"
+description = "Developed a Python-based network vulnerability scanner that automates the process of identifying security weaknesses in network infrastructures."
+category = "Security Tools"
+icon = "⚠️"
+link = "https://github.com/yourusername/vuln-scanner"
+technologies = ["Python", "Nmap", "Vulnerability Assessment", "Automation"]
+highlights = [
+    "Automated vulnerability scanning workflows",
+    "Integration with Nmap for port scanning",
+    "Comprehensive reporting functionality"
+]
+
+[[projects]]
+name = "Bug Bounty Discoveries"
+description = "Active participation in bug bounty programs with successful identification and reporting of critical security vulnerabilities across various platforms."
+category = "Bug Bounty"
+icon = "🐛"
+link = "https://hackerone.com/yourusername"
+technologies = ["Web Security", "Bug Bounty", "Research", "Reporting"]
+highlights = [
+    "Discovered critical authentication bypasses",
+    "Reported XSS and CSRF vulnerabilities",
+    "Contributed to improving web application security"
+] 

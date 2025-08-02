@@ -10,9 +10,14 @@
 
 	// Current path for active link highlighting
 	let path = $derived($page.url.pathname);
+	
+	// Apply dark theme by default
+	if (browser) {
+		document.documentElement.classList.add('dark');
+	}
 </script>
 
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col min-h-screen dark">
 	<Header path={path} />
 	
 	<main class="container-custom py-8 flex-grow">
