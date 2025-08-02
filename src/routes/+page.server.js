@@ -1,11 +1,13 @@
 import TOML from 'toml';
 import { readFileSync } from 'fs';
-import { resolve } from 'path';
+import { resolve, join } from 'path';
+import { dev } from '$app/environment';
 
 export async function load() {
     try {
-        // Read site.toml
-        const siteTomlPath = resolve('site.toml');
+        // In production, read from static directory, in dev from root
+        const siteTomlPath = dev ? resolve('site.toml') : join(process.cwd(), 'static', 'site.toml');
+        
         const siteTomlContent = readFileSync(siteTomlPath, 'utf-8');
         const siteData = TOML.parse(siteTomlContent);
         

@@ -14,13 +14,13 @@ export async function getAllPosts() {
       try {
         /** @type {any} */
         const mod = module;
-        const slug = path.split('/').pop()?.replace('.md', '') || '';
-        
+      const slug = path.split('/').pop()?.replace('.md', '') || '';
+      
         // Extract metadata from the module
         const metadata = mod.metadata || {};
         
         posts.push({
-          slug,
+        slug,
           title: metadata.title || 'Untitled Post',
           date: metadata.date || new Date().toISOString().split('T')[0],
           description: metadata.description || metadata.excerpt || '',
@@ -47,8 +47,8 @@ export async function getAllPosts() {
  */
 export async function getPostBySlug(slug) {
   try {
-    const posts = await getAllPosts();
-    return posts.find(post => post.slug === slug);
+  const posts = await getAllPosts();
+  return posts.find(post => post.slug === slug);
   } catch (error) {
     console.error(`Error loading post ${slug}:`, error);
     return undefined;
