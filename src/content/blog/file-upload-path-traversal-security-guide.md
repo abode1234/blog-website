@@ -4,9 +4,9 @@
    description: "This comprehensive guide provides a deep dive into file upload and path traversal vulnerabilities, highlighting the importance of security in web applications."
    tags: ["web-security", "security", "file-upload", "path-traversal", "penetration-testing", "owasp", "cybersecurity"]
 ---
+
 # Mastering Web Security: A Comprehensive Guide to File Upload and Path Traversal Vulnerabilities
 
-*Published by Abdul Al-Motaleb*
 
 In today's interconnected digital landscape, web applications serve as the backbone of modern business operations. However, with great functionality comes great responsibility—particularly when it comes to security. Among the most critical and often overlooked vulnerabilities are **File Upload** and **Path Traversal** attacks, which can provide attackers with devastating access to your systems.
 
