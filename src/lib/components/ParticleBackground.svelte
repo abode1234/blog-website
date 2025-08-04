@@ -156,14 +156,6 @@
     }
   }
 
-  /* Test visibility */
-  .particle:first-child {
-    background: rgba(255, 0, 0, 1) !important;
-    width: 20px !important;
-    height: 20px !important;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8) !important;
-  }
-
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .particle {
@@ -179,6 +171,14 @@
     .particle:nth-child(4n) {
       width: 6px;
       height: 6px;
+    }
+  }
+
+  /* Performance optimization for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .particle {
+      animation-duration: 8s;
+      animation-timing-function: linear;
     }
   }
 </style> 
