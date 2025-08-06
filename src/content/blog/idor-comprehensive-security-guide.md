@@ -1,6 +1,12 @@
-# IDOR Vulnerabilities: A Comprehensive Security Guide from the Trenches
+---
+   title: "IDOR Vulnerabilities: A Comprehensive Security Guide from the Trenches"
+   date: 2025-08-6
+   description: "This post provides a comprehensive guide to preventing and detecting Insecure Direct Object References (IDOR) vulnerabilities in modern web applications."
+   tags: ["security", "web-security", "penetration-testing", "owasp", "cybersecurity","idor" ]
+---
 
-*By [Your Name], Senior Security Engineer @ Google*
+
+# IDOR Vulnerabilities: A Comprehensive Security Guide from the Trenches
 
 ---
 
