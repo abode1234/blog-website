@@ -12,9 +12,9 @@
 
 ## Introduction
 
-During my tenure as a Senior Security Engineer at Google, I've witnessed firsthand how Insecure Direct Object References (IDOR) vulnerabilities continue to plague web applications across the industry. Despite being well-documented for over a decade, IDOR remains one of the most prevalent and dangerous security flaws in modern applications.
+Insecure Direct Object References (IDOR) vulnerabilities continue to plague web applications across the industry. Despite being well-documented for over a decade, IDOR remains one of the most prevalent and dangerous security flaws in modern applications.
 
-In this comprehensive guide, I'll share insights gained from securing Google's vast infrastructure, analyzing thousands of vulnerability reports, and working with development teams to build more secure systems. Whether you're a security professional, developer, or bug bounty hunter, this article will provide you with the deep understanding needed to identify, exploit, and prevent IDOR vulnerabilities.
+This comprehensive guide explores the different types of IDOR vulnerabilities, detection techniques, and prevention strategies based on industry best practices and real-world experience.
 
 ## What Are IDOR Vulnerabilities?
 
@@ -22,7 +22,7 @@ Insecure Direct Object References occur when an application provides direct acce
 
 ### The Anatomy of an IDOR Attack
 
-Consider this real-world scenario from a financial application we reviewed:
+Consider this real-world scenario from a financial application:
 
 ```
 Normal request: GET /api/account/12345
@@ -39,7 +39,7 @@ If the application doesn't verify that the current user owns account 12346, it w
 
 ## The Five Types of IDOR Vulnerabilities
 
-Through extensive security assessments at Google, I've categorized IDOR vulnerabilities into five distinct types, each requiring different detection and mitigation strategies.
+IDOR vulnerabilities can be categorized into five distinct types, each requiring different detection and mitigation strategies.
 
 ### 1. Horizontal IDOR: Same-Level Access Violations
 
@@ -69,7 +69,7 @@ app.get('/user/profile/:userId', authenticateUser, (req, res) => {
 
 **Definition**: Regular users access administrative or higher-privilege resources.
 
-**Case Study**: During a security review of an internal Google tool, we discovered that changing `/user/123` to `/admin/1` in the URL granted access to administrative functions. This type of vulnerability can be catastrophic.
+**Case Study**: During a security review of an enterprise application, changing `/user/123` to `/admin/1` in the URL granted access to administrative functions. This type of vulnerability can be catastrophic.
 
 **Example Attack Flow**:
 ```
@@ -96,7 +96,7 @@ def admin_dashboard(request):
 
 **Definition**: Attackers can modify or delete resources without seeing the actual data.
 
-**Google's Experience**: We've seen cases where attackers could delete user accounts, modify settings, or trigger actions without receiving the actual data in the response.
+**Real-world Experience**: There have been cases where attackers could delete user accounts, modify settings, or trigger actions without receiving the actual data in the response.
 
 **Example**:
 ```bash
@@ -139,7 +139,7 @@ POST /user/update
 }
 ```
 
-**Google's Mitigation Approach**:
+**Secure Mitigation Approach**:
 ```javascript
 // Secure implementation with explicit field validation
 const ALLOWED_FIELDS = ['name', 'email', 'phone'];
@@ -199,7 +199,7 @@ const verifyToken = (token) => {
 
 ### Automated Discovery Methods
 
-At Google, we've developed sophisticated tools for IDOR detection. Here are some techniques you can implement:
+Various sophisticated tools and techniques have been developed for IDOR detection. Here are some methods that can be implemented:
 
 #### 1. Parameter Fuzzing
 ```python
@@ -299,7 +299,7 @@ def detect_idor_patterns(access_logs):
 
 ### 1. Access Control Implementation
 
-**The Google Approach**: We implement defense-in-depth with multiple layers of authorization checks.
+**Industry Best Practice**: Implementing defense-in-depth with multiple layers of authorization checks.
 
 ```java
 @RestController
@@ -733,7 +733,7 @@ if __name__ == "__main__":
 
 ## Conclusion
 
-IDOR vulnerabilities represent a critical security risk that continues to affect applications across all industries. Through my experience at Google, I've learned that preventing IDOR requires a multi-layered approach combining secure development practices, comprehensive testing, and continuous monitoring.
+IDOR vulnerabilities represent a critical security risk that continues to affect applications across all industries. Industry experience has shown that preventing IDOR requires a multi-layered approach combining secure development practices, comprehensive testing, and continuous monitoring.
 
 ### Key Takeaways
 
