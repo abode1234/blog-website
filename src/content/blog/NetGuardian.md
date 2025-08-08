@@ -1,6 +1,6 @@
 ---
    title: "NetGuardian Detector Service (AI-Driven HTTP Inspection)"
-   date: 2025-08-14
+   date: 2025-08-1
    description: "This post explores the NetGuardian detector service, which integrates an AI-powered detector to inspect incoming HTTP requests in real time, pinpoint exploitable parameters, and emit alerts."
    tags: [ "AI","XGBoost", "web-security", "security", "penetration-testing", "owasp", "cybersecurity"]
 ---

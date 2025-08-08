@@ -1,6 +1,6 @@
 ---
    title: "Mastering Web Security: A Comprehensive Guide to File Upload and Path Traversal Vulnerabilities"
-   date: 2025-08-14
+   date: 2025-08-2
    description: "This comprehensive guide provides a deep dive into file upload and path traversal vulnerabilities, highlighting the importance of security in web applications."
    tags: ["web-security", "security", "file-upload", "path-traversal", "penetration-testing", "owasp", "cybersecurity"]
 ---
